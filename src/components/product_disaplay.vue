@@ -1,5 +1,4 @@
 <template>
- 
 <div class="container mt-5 mb-5 my-5">
 <h2>Nombre restants de cette produit :{{nombre_restant}}</h2>
 <h3>Prix Totale : {{prix_total}} Dt</h3>
@@ -7,9 +6,41 @@
  <li v-on:click="addcarte" :class="{disabledButton:nombre_restant==0}" :disabled="nombre_restant==0" class="btn btn-success">+</li>
  <li  @click="removecarte" :class="{disabledButton:carte==0}"  :disabled="carte==0" class="btn btn-danger">-</li>
  </ul>
-<div class="cart">
-    {{carte}}
+<div style="cursor:pointer" class="cart" data-bs-toggle="modal" data-bs-target="#exampleModal">
+     <i  class="material-icons" >
+        shopping_cart
+     </i>
+     <div class="text-primary">
+        {{carte}}
+     </div>
 </div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cart info :</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+                <div v-for="varaint in variants" :key="varaint.id">
+                   <div class="mb-3" v-if="varaint.carte>0">
+                        <h2>{{varaint.name}}</h2>
+                        <h3>{{varaint.price*varaint.carte}} TND</h3>
+                        <hr>
+                 </div>
+                </div>
+                <span class="text-warning">Prix total :{{prix_total}}</span>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
   <div class="card" style="width:30rem;">
   <img :src="image" :alt="titel" class="card-img-top">
   <div class="card-body">
@@ -21,8 +52,8 @@
         :style="{backgroundColor:varaint.color}"
         @click="updatevariant(index)"
          class="color-circle">{{varaint.color}}</span>
-        <button class="cart1">prix : {{prix}}</button>
-       
+     <button v-if="onStock" class="cart1">prix : {{prix}}</button>
+     <h2 class="text-danger" v-else>OUT OF STOCK</h2>
   </div>
    <h4 style="margin-left:15px">size Guide :</h4>
    <select class="col-4" style="margin:25px;margin-top:-8px">
@@ -97,7 +128,10 @@ export default {
             */
             // return this.variants[this.selectvaraint].carte*this.variants[this.selectvaraint].price;
             return price;
-        }
+        },
+        onStock(){
+         return this.variants[this.selectvaraint].quantity>0?true:false;
+        },
     }
 }
 </script>

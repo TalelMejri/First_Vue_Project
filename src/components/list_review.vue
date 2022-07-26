@@ -1,5 +1,5 @@
 <template>
-    <div class="liste_review">
+    <div class="liste_review text-center">
     <div class="review-container">
         <h3>Commentaires:</h3>
         <ul>
@@ -24,3 +24,12 @@
     }
  }
 </script>
+
+<style scoped>
+.liste_review{
+    background-color:whitesmoke;
+}
+li{
+    list-style: none;
+}
+</style>

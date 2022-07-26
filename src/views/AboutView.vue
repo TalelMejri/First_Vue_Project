@@ -2,7 +2,10 @@
   <div class="store">
       <product_disaplay :variants="variants" :reviews="reviews" @remove_from_carte="remove" @add_to_carte="add"></product_disaplay>
       <review_form @review_submited="addreview"></review_form>
-      <button @click="showhide">show/hide comments</button>
+      <button @click="showhide"> 
+       comments 
+       <i class="material-icons">{{type}}</i>
+      </button>
       <list_review :style="{display:field}" :reviews="reviews"></list_review>
   </div>
 </template>
@@ -15,6 +18,7 @@
     name:'AboutView',
     data: function (){
       return{
+        type:'visibility',
         field:'none',
         reviews:[],
         variants:[
@@ -40,7 +44,12 @@
       this.reviews.push(review);
     },
     showhide(){
+       if(this.reviews.length==0){
+         alert("no comments")
+       }else{
       this.field= this.field=='none' ? 'block' : 'none' ;
+      this.type=this.field=='none'?'visibility':'visibility_off';
+       }
       /*
       this.field = none 
       this.field? 
@@ -58,10 +67,10 @@
 </script>
 
 <style scoped>
- button{
 
+ button{
   margin-right:250px;
-  margin-top:-50px;
+  margin-top:-80px;
   border:none;
   padding:15px 30px;
   font-size:18px;
@@ -72,5 +81,9 @@
   background-color: blueviolet;
   position: relative;
   float: right;
+ };
+ button:hover{
+  background-color: #fff;
+  color:blueviolet;
  };
 </style>

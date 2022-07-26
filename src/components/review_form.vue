@@ -19,8 +19,8 @@
 
             <label for="recommand">Recommanderiez-vous ce produit?</label>
             <select id="recommand" v-model.number="recomende">
-            <option>Yes</option>
-            <option>No</option>
+                <option>Yes</option>
+                <option>No</option>
             </select>
 
             <input type="submit" class="button" value="Envoyer">

@@ -6,7 +6,7 @@
          <img  :alt="alter" src="../assets/images/pub.png" />
       </div> 
       <div class="col-md-6  ">
-        <p id="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione, aliquam optio. Labore, accusantium. Et illo a quod ex sint laborum.</p>
+        <p  id="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione, aliquam optio. Labore, accusantium. Et illo a quod ex sint laborum.</p>
       </div>
     </div>
     </div>
