@@ -1,4 +1,5 @@
 <template>
+
   <div class="hello">
      <div class="container">
     <div class="row">
@@ -29,6 +30,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
+video.bg-video{
+  		 z-index: 0;
+}
 .hello{
   background-color:whitesmoke;
   height:80vh;

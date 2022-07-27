@@ -6,14 +6,14 @@
  <li v-on:click="addcarte" :class="{disabledButton:nombre_restant==0}" :disabled="nombre_restant==0" class="btn btn-success">+</li>
  <li  @click="removecarte" :class="{disabledButton:carte==0}"  :disabled="carte==0" class="btn btn-danger">-</li>
  </ul>
-<div style="cursor:pointer" class="cart" data-bs-toggle="modal" data-bs-target="#exampleModal">
-     <i  class="material-icons" >
+<button style="cursor:pointer"  class="cart btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
+     <i  class="material-icons">
         shopping_cart
      </i>
      <div class="text-primary">
         {{carte}}
      </div>
-</div>
+</button>
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -25,16 +25,18 @@
       <div class="modal-body">
                 <div v-for="varaint in variants" :key="varaint.id">
                    <div class="mb-3" v-if="varaint.carte>0">
-                        <h2>{{varaint.name}}</h2>
-                        <h3>{{varaint.price*varaint.carte}} TND</h3>
+                        <span style="font-size:25px" class="fw-bold">Name :</span>
+                        <span style="font-size:18px">{{varaint.name}}</span>
+                        <h3 style="font-size:25px" class="mb-3"><span class="fw-bold" style="font-size:25px">prix : </span> {{varaint.price*varaint.carte}} TND</h3>
+                         <span  class="fw-bold" v-if="varaint.carte>0">Quantity : {{varaint.carte}}</span>
                         <hr>
-                 </div>
                 </div>
-                <span class="text-warning">Prix total :{{prix_total}}</span>
+                </div>
+                <span class="text-warning fw-bold">Prix total :{{prix_total}}</span>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">confirm</button>
+        <button type="button"  class="btn btn-primary">confirm</button>
       </div>
     </div>
   </div>
@@ -130,7 +132,7 @@ export default {
             return price;
         },
         onStock(){
-         return this.variants[this.selectvaraint].quantity>0?true:false;
+         return this.variants[this.selectvaraint].quantity > 0 ? true:false;
         },
     }
 }
