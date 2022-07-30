@@ -22,7 +22,7 @@ export default {
   data: function (){
     return{
      image:'../assets/images/magasin.jpg',
-       image2:'../assets/images/shop.jpg',
+     image2:'../assets/images/shop.jpg',
      alter:'logo store'
     };
   },
