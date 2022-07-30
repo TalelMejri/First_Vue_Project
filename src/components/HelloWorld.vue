@@ -6,7 +6,7 @@
        <img :src="image_active" :alt="alter">
   </div>
   <div  v-for="image in images" :key="image.id" class="carousel-item">
-      <h2>{{image.name}}</h2>
+       <img :src="image.name" :alt="alter">
   </div>
 </div>
 </div>
