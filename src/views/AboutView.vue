@@ -2,7 +2,6 @@
   <div class="store">
       <product_disaplay :variants="variants" :reviews="reviews" @remove_from_carte="remove" @add_to_carte="add"></product_disaplay>
       <review_form @review_submited="addreview"></review_form>
-       
       <button @click="showhide"> 
        comments 
        <i class="material-icons">{{type}}</i>
