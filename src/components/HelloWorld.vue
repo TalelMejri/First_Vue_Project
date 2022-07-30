@@ -2,16 +2,13 @@
 
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
-    <div class="carousel-item active">
-       <img  :alt="alter" :src="image" />
-    </div>
-    <div class="carousel-item">
-       <img  :alt="alter" :src="image2" />
-    </div>
-    <div class="carousel-item">
-       <img  :alt="alter" :src="image3" />
-    </div>
+    <div class="carousel-item active" >
+       <img :src="image_active" :alt="alter">
   </div>
+  <div  v-for="image in images" :key="image.id" class="carousel-item">
+      <img  :src="image" :alt="alter">
+  </div>
+</div>
 </div>
 </template>
 
@@ -20,9 +17,11 @@ export default {
   name: "HelloWorld",
   data: function (){
     return{
-     image:'../assets/images/magasin.jpg',
-     image2:'../assets/images/shop.jpg',
-       image3:'../assets/images/store.jpg',
+      image_active:'../assets/images/magasin.jpg',
+      images:{
+              image:'../assets/images/shop.jpg',
+              image:'../assets/images/store.jpg',
+              },
      alter:'logo store'
     };
   },
