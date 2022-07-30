@@ -5,8 +5,8 @@
     <div class="carousel-item active" >
        <img :src="image_active" :alt="alter">
   </div>
-  <div  v-for="image in images" :key="image" class="carousel-item">
-      <img  :src="image" :alt="alter">
+  <div  v-for="image in images" :key="image.id" class="carousel-item">
+      <h2>{{image.name}}</h2>
   </div>
 </div>
 </div>
@@ -18,11 +18,11 @@ export default {
   data: function (){
     return{
       image_active:'../assets/images/magasin.jpg',
-      images:{
-              image1:'../assets/images/shop.jpg',
-              image:'../assets/images/store.jpg',
-              },
-     alter:'logo store'
+      images:[
+               {id:1,name:'../assets/images/shop.jpg'},
+               {id:2,name:'../assets/images/store.jpg'}
+      ],
+     alter:'loo store'
     };
   },
   
