@@ -21,7 +21,6 @@
                             <li>Home</li>
                             <li>Our services</li>
                             <li>Support</li>
-                            <li>Terms and Condition</li>
                         </ul>
                     </div>
                 </div>
