@@ -1,17 +1,19 @@
 <template>
 
-  <div class="hello">
-     <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-lg-5">
-         <img  :alt="alter" src="../assets/images/pub.png" />
-      </div> 
-      <div class="col-md-6  ">
-        <p  id="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione, aliquam optio. Labore, accusantium. Et illo a quod ex sint laborum.</p>
-      </div>
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+       <img  :alt="alter" src="../assets/images/pub.png" />
     </div>
+    <div class="carousel-item">
+       <img  :alt="alter" src="../assets/images/pub.png" />
+    </div>
+    <div class="carousel-item">
+       <img  :alt="alter" src="../assets/images/pub.png" />
     </div>
   </div>
+</div>
+  
 </template>
 
 <script>
