@@ -6,7 +6,7 @@
        <img  :alt="alter" :src="image" />
     </div>
     <div class="carousel-item">
-       <img  :alt="alter" src="../assets/images/pub.png" />
+       <img  :alt="alter" :src="image2" />
     </div>
     <div class="carousel-item">
        <img  :alt="alter" src="../assets/images/pub.png" />
@@ -21,7 +21,8 @@ export default {
   name: "HelloWorld",
   data: function (){
     return{
-     image:'../assets/images/shop.png',
+     image:'../assets/images/magasin.jpg',
+       image2:'../assets/images/shop.jpg',
      alter:'logo store'
     };
   },
@@ -31,6 +32,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+img{
+   width:100%;
+   height:20%;
+}
  
 </style>
