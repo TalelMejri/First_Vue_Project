@@ -39,28 +39,6 @@
                         <h5 class="text-light mt-4">Contact Us</h5>
                         <p class="1h-lg mt-3 mb-5">Get in touch with us via mail phone.we are waiting for your call or message</p>
                         <a class="btn rounded-pill main-btn w-100" href="#">talelmejri8@gmail.com</a>
-                        <ul class="d-flex mt-5 list-unstyled gap-3">
-                           <li>
-                            <a class="d-block text-dark" href="#">
-                                <i class="fa-brands fa-facebook p-2"></i>
-                            </a>
-                           </li>
-                           <li>
-                            <a class="d-block text-dark" href="#">
-                                <i class="fa-brands fa-github p-2"></i>
-                            </a>
-                           </li>
-                           <li>
-                            <a class="d-block text-dark" href="#">
-                                <i class="fa-brands fa-instagram p-2"></i>
-                            </a>
-                           </li>
-                           <li>
-                            <a class="d-block text-dark" href="#">
-                                <i class="fa-brands fa-twitter p-2"></i>
-                            </a>
-                           </li>
-                        </ul>
                     </div>
                 </div>
             </div>
@@ -78,6 +56,7 @@ export default {
 .footer{
     border-top: 4px solid #000;
     background-color:#8a7ca0;
+    height:250%;
 }
 img{
     border-radius: 50px;
