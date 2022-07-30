@@ -5,7 +5,7 @@
     <div class="carousel-item active" >
        <img :src="image_active" :alt="alter">
   </div>
-  <div  v-for="image in images" :key="image.id" class="carousel-item">
+  <div  v-for="image in images" :key="image" class="carousel-item">
       <img  :src="image" :alt="alter">
   </div>
 </div>
@@ -19,7 +19,7 @@ export default {
     return{
       image_active:'../assets/images/magasin.jpg',
       images:{
-              image:'../assets/images/shop.jpg',
+              image1:'../assets/images/shop.jpg',
               image:'../assets/images/store.jpg',
               },
      alter:'logo store'
