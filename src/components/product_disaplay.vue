@@ -191,5 +191,4 @@ li{
     cursor: not-allowed;
     background: gray;
   }
-
 </style>

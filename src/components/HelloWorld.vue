@@ -1,7 +1,7 @@
 <template>
-<div class="row ">
+<div class="row" style="background-color:#29558c;">
 <div class="col-md-6 mt-5">
-    <div class="text-center my-5">
+    <div class="text-center my-5" >
       <h1 class="text-info"> Mejri Store </h1>
     </div>
     <div class="text-center my-5">
@@ -49,31 +49,4 @@ img{
  h1 , h2 {
     text-shadow: 5px 5px 5px #403c32;
     }
-     .fadin{
-        animation: fadeleft 1s;
-    }
-    @keyframes fadeleft {
-        from{
-          opacity: 0;
-          right: -400px;
-        }to{
-          right: 10px;
-        }
-
-    }
-    .fadeout{
-        animation: faseright 1s;
-        position: relative;
-    }
-    @keyframes faseright {
-        from{
-          opacity: 0;
-          left: -400px;
-        }to{
-         left: 10px;
-        }
-
-    }
-
-
 </style>
