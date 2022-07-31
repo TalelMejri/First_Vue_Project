@@ -8,7 +8,7 @@
  </ul>
 
 
- <button class="btn btn-outline-dark d-flex" data-bs-toggle="modal" data-bs-target="#exampleModal">
+ <button class="btn btn-outline-dark d-flex float-end" data-bs-toggle="modal" data-bs-target="#exampleModal">
       <i  class="material-icons mx-2"> shopping_cart</i>
          Cart
    <span class="badge bg-dark text-white rounded-pill mt-1 mx-1">{{carte}}</span>
