@@ -6,14 +6,14 @@
  <li v-on:click="addcarte" :class="{disabledButton:nombre_restant==0}" :disabled="nombre_restant==0" class="btn btn-success">+</li>
  <li  @click="removecarte" :class="{disabledButton:carte==0}"  :disabled="carte==0" class="btn btn-danger">-</li>
  </ul>
-<button style="cursor:pointer"  class="cart btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
-     <i  class="material-icons">
-        shopping_cart
-     </i>
-     <div class="text-primary">
-        {{carte}}
-     </div>
-</button>
+
+
+ <button class="btn btn-outline-dark d-flex" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <i  class="material-icons mx-2"> shopping_cart</i>
+         Cart
+   <span class="badge bg-dark text-white rounded-pill mt-1 mx-1">{{carte}}</span>
+ </button>
+
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
