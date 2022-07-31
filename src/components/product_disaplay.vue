@@ -7,7 +7,6 @@
  <li  @click="removecarte" :class="{disabledButton:carte==0}"  :disabled="carte==0" class="btn btn-danger">-</li>
  </ul>
 
-
  <button class="btn btn-outline-dark d-flex float-end" data-bs-toggle="modal" data-bs-target="#exampleModal">
       <i  class="material-icons mx-2"> shopping_cart</i>
          Cart
