@@ -12,8 +12,7 @@
          Cart
    <span class="badge bg-dark text-white rounded-pill mt-1 mx-1">{{carte}}</span>
  </button>
-
-<!-- Modal -->
+ 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
